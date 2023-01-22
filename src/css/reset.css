@@ -1,0 +1,12 @@
+/* o asterisco é todos o elementos que estao na tela  ele é um seletor dentro da chaves são propriedade
+*/*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;/* depois pesquisa sobre o assunto*/
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,132 @@
+body{
+    font-family: 'poppins';
+}
+.cabecalho{
+        display: flex; /*alinha os produtodos um do lado do outro*/
+    justify-content: space-between;/* da um espaçamento dos elementos*/
+    padding: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.cabecalho .logo{
+
+ width: 65px; /* tamanho da fonte imagem etc*/ 
+ 
+}
+
+.cabecalho .menu{
+    
+    display: flex;
+    align-items: center;/*centraliza o produto dentro */
+    height: 100%; /*ele ocupa 100% da pagina */
+}
+.cabecalho nav li a{
+    font-weight: bold; /*negrito*/
+    color: white;
+    font-size: 25px;/*tamanho da letra ou font*/
+    padding: 10px 20px;/*muda o espaçamento dentro do backgroud-color o primeiro valor é o top e baixo e o segundo valore esquerda e direita */
+    border-radius: 50px; 
+    transition: 0.3s;
+}
+.cabecalho nav li a:hover {
+    background-color: #d5011d;
+}
+.container{
+
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items:  center;
+    height: calc(100vh- 132px); /*calcular os produtos para alinha e tira a barra de rolagem*/
+    padding:  0 30px 30px;  
+     
+}
+.container .imagem-titulo{
+    max-width: 500px;
+}
+.container .descricao{
+    color: #a8abb7;
+    width: 85%;
+    font-size: 18px;
+    margin: 30px 0 ;
+}
+.container .botao{
+  background-color: red;
+  color: white;   
+  padding: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  transition: 0.5s all ease-in-out;
+}
+.container .botao:hover{
+    transform: scale(1.1);
+}
+.fundo-video{
+  background-color:#d5011d;
+  position: absolute;
+  z-index: -1;
+  width:100vw ;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+}
+.fundo-video .video{
+    height: 100vh;
+}
+.fundo-video::after{
+    content: "";
+    background-color:red;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+}
+.modal {
+    background-color: rgba(52, 52, 50, 0.749);
+    position: fixed; /*fixa na minha tela */
+     width: 100vw;/*largura*/
+    height: 100vh;/*altura*/
+    top: 0;
+    left: 0;
+    visibility: hidden;/*para esconder qualquer elemneto que esteja na frente da pagina*/
+}
+.conteudo-modal{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  border-radius: 5px; /*ter borda*/
+  gap: 15px ;/*afastamento dos elementos*/
+  
+}
+.fecha-modal{
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+.modal iframe{
+    border-width: 0;/*largura de borda*/
+    height: 360px;;
+    width: 640px;
+
+}
+.modal.aberto{
+    opacity: 1;
+    visibility: visible;
+}
